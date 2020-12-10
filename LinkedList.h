@@ -20,11 +20,11 @@ private:
     int num_items;
 public:
 
-	LinkedListInterface(void) {
-        mylist = NULL;
-        num_items = 0;
+	LinkedList(void) {
+      mylist = NULL;
+      num_items = 0;
     };
-	virtual ~LinkedListInterface(void) {};
+	virtual ~LinkedList(void) {};
 
 	/*
 	insertHead
@@ -33,10 +33,10 @@ public:
 
 	Do not allow duplicate values in the list.
 	*/
-	virtual void insertHead(T value) = 0;{
+	virtual void insertHead(T value){
         Node *ptr = mylist;
         mylist = new Node(value);
-        mylist -> next = ptr;
+        mylist->next = ptr;
         cout << "In insertHead" << endl;
     }
 
@@ -47,9 +47,9 @@ public:
 
 	Do not allow duplicate values in the list.
 	*/
-	virtual void insertTail(T value) = 0;{
+	virtual void insertTail(T value) {
 
-    }
+	};
 
 	/*
 	insertAfter
@@ -60,9 +60,9 @@ public:
 	A node should only be added if the node whose value is equal to
 	insertionNode is in the list. Do not allow duplicate values in the list.
 	*/
-	virtual void insertAfter(T value, T insertionNode) = 0;{
+	virtual void insertAfter(T value, T insertionNode) {
 
-    }
+	};
 
 	/*
 	remove
@@ -71,18 +71,18 @@ public:
 
 	The list may or may not include a node with the given value.
 	*/
-	virtual void remove(T value) = 0;{
+	virtual void remove(T value) {
 
-    }
+	};
 
 	/*
 	clear
 
 	Remove all nodes from the list.
 	*/
-	virtual void clear() = 0;{
+	virtual void clear() {
 
-    }
+	};
 
 	/*
 	at
@@ -92,18 +92,18 @@ public:
 
 	If the given index is out of range of the list, throw an out of range exception.
 	*/
-	virtual T at(int index) = 0;{
+	virtual T at(int index) {
 
-    }
+	};
 
 	/*
 	size
 
 	Returns the number of nodes in the list.
 	*/
-	virtual int size() = 0;{
-
-    }
+	virtual int size() {
+		
+	};
 
 	/*
 	toString
@@ -114,7 +114,7 @@ public:
 	For example, a LinkedList containing the value 1, 2, 3, 4, and 5 should return
 	"1 2 3 4 5"
 	*/
-	virtual string toString() = 0;{
+	virtual string toString(){
         stringstream ss;
         for(Node *ptr =mylist; ptr != NULL; ptr = ptr -> next){
             ss << "ptr " << ptr << " val"<<ptr->data<<" next " << ptr -> next << endl;

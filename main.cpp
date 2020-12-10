@@ -34,10 +34,11 @@ int main() {
 
 	//Start Test code
 	iLL = new LinkedList<int>();
-	iLL -> insertHead(10);
-	cout << iLL ->tostring() << endl;
-	iLL -> insertHead(10);
-	cout << iLL ->tostring() << endl;
+	iLL->insertHead(10);
+	cout << iLL->toString()<<endl;
+	iLL->insertHead(20);
+	cout << iLL->toString()<<endl;
+	
 	return 0;
 	//End test code
 
