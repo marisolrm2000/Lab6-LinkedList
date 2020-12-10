@@ -32,6 +32,15 @@ int main() {
 	LinkedList<int>* iLL = NULL;//the integer linked list
 	LinkedList<string>* sLL = NULL;//the string linked list
 
+	//Start Test code
+	iLL = new LinkedList<int>();
+	iLL -> insertHead(10);
+	cout << iLL ->tostring() << endl;
+	iLL -> insertHead(10);
+	cout << iLL ->tostring() << endl;
+	return 0;
+	//End test code
+
 	for (int i = 0; i < NUM_FILES; i++) {
 		ifs.open(fileArray[i]); // open the file to read from
 		ofs.open("out_" + fileArray[i]); // open the file to write to
